@@ -1,2 +1,7 @@
 highlighter: pygments
+markdown: kramdown
 github: [Repository metadata]
+excerpt_separator: ""
+collections:
+    docs:
+        output: true

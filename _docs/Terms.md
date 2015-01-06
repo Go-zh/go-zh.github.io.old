@@ -1,4 +1,8 @@
-# Go中文翻译
+---
+layout: default
+title: 术语列表
+---
+# {{ page.title }}
 
 ## 术语翻译
 
@@ -81,7 +85,7 @@ label              |                           | 标记                         
 channel            | 信道                      | 通道/信道？                                           | receive/send-only channel？
 panic              |                           |                                                       | panic
 recover            |                           |                                                       | recover
-embedding          |                           | 是嵌入好内嵌好？                                      | struct embedding/embedded struct 
+embedding          |                           | 是嵌入好内嵌好？                                      | struct embedding/embedded struct
 nil                | 无值                      | nil/空值/空/无值                                      | nil 无值，empty 空(值)，zero-value 零值
 buitin function    | 内建函数                  | 内建函数？                                            |
 argument/parameter | 实(际)参(数)/形(式)参(数) | 参数？实参/形参？                                     |
