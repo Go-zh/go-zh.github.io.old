@@ -1,8 +1,16 @@
-```
+---
+layout: default
+title: 包文档翻译状态
+summary: 记录了包文档的翻译状态和任务分配。
+---
+
+本文档用于记录包文档的翻译状态。
+
+<pre>
 pkg
 ├── archive
-│   ├── tar // Liudi Wu: 完成 (Chensi Yuan: 整理)
-│   └── zip // Liudi Wu: 完成 (Chensi Yuan: 整理)
+│   ├── tar  // Liudi Wu: 完成 (Chensi Yuan: 整理)
+│   └── zip  // Liudi Wu: 完成 (Chensi Yuan: 整理)
 ├── bufio    // OlingCat: 部分完成 (Chensi Yuan：整理合并 Liudi Wu 翻译)
 ├── builtin  // OlingCat: 完成
 ├── bytes    // Liudi Wu：完成 (Chensi Yuan: 待整理)
@@ -78,7 +86,7 @@ pkg
 │   └── fnv
 ├───html            // Cipher Chen: *待译*
 │   └── template    // Cipher Chen: *待译*
-├── image            // 轩脉刃: 完成
+├── image           // 轩脉刃: 完成
 │   ├── color       // 轩脉刃: 完成
 │   │   └─ palette  // 轩脉刃: *待译*
 │   ├── draw        // 轩脉刃: 完成
@@ -89,7 +97,7 @@ pkg
 │   └── suffixarray
 ├── internal
 │   └── syscall
-├── io          // OlingCat: 完成
+├── io         // OlingCat: 完成
 │   └── ioutil // OlingCat & Liudi Wu: 完成
 ├── lib9
 │   ├── fmt
@@ -98,7 +106,7 @@ pkg
 ├── liblink
 ├── log
 │   └── syslog
-├── math       // OlingCat: 完成
+├── math      // OlingCat: 完成
 │   ├── big   // OlingCat: *翻译*
 │   ├── cmplx // OlingCat: 完成
 │   └── rand  // OlingCat: *待译*
@@ -107,7 +115,7 @@ pkg
 │   │   └── quotedprintable
 │   └── multipart
 ├── net
-│   ├── http           // OlingCat & Liudi Wu: 完成 (OlingCat: 需整理)
+│   ├── http          // OlingCat & Liudi Wu: 完成 (OlingCat: 需整理)
 │   │   ├── cgi       // 轩脉刃: 完成
 │   │   ├── cookiejar // 轩脉刃: *待译*
 │   │   ├── fcgi      // 轩脉刃: 完成
@@ -115,8 +123,8 @@ pkg
 │   │   ├── httputil  // 轩脉刃: 完成
 │   │   ├── internal
 │   │   └── pprof     // 轩脉刃: 完成
-│   ├── mail           // 轩脉刃: 完成
-│   ├── rpc            // 轩脉刃: 完成
+│   ├── mail          // 轩脉刃: 完成
+│   ├── rpc           // 轩脉刃: 完成
 │   │   └── jsonrpc   // 轩脉刃: 完成
 │   ├── smtp
 │   ├── textproto
@@ -130,28 +138,28 @@ pkg
 ├── reflect
 ├── regexp
 │   └── syntax
-├── runtime     // OlingCat: 完成 (OlingCat: 需更新)
+├── runtime    // OlingCat: 完成 (OlingCat: 需更新)
 │   ├── cgo    // OlingCat: 完成
 │   ├── debug  // OlingCat: 完成
 │   ├── pprof  // OlingCat: 完成
 │   └── race   // OlingCat: 完成
-├── sort        // Johntech: 完成 (OlingCat: 已校对)
-├── strconv     // OlingCat: *待译*
+├── sort       // Johntech: 完成 (OlingCat: 已校对)
+├── strconv    // OlingCat: *待译*
 ├── strings
-├── sync        // OlingCat: 完成
+├── sync       // OlingCat: 完成
 │   └── atomic // OlingCat: 完成
 ├── syscall
 ├── testing
 │   ├── iotest
 │   └── quick
-├── text            // Stone Lion: *翻译*
+├── text           // Stone Lion: *翻译*
 │   ├── scanner    // Stone Lion: *翻译*
 │   ├── tabwriter  // Stone Lion: *翻译*
 │   └── template   // Stone Lion: *翻译*
 │       └── parse  // Stone Lion: *翻译*
-├── time       // OlingCat:  *待译*
-├── unicode    // OlingCat: 完成
+├── time      // OlingCat:  *待译*
+├── unicode   // OlingCat: 完成
 │   ├── utf16 // OlingCat: 完成
 │   └── utf8  // OlingCat: 完成
-└── unsafe     // OlingCat: 完成
-```
+└── unsafe    // OlingCat: 完成
+</pre>

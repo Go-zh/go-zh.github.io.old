@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 翻译指南
+summary: 说明了翻译步骤及注意事项。
 ---
 
 # Go 项目翻译指南
@@ -38,7 +39,7 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 一般来说，Git 只需要基本的用户名和邮件地址就能正常工作。不过为了方便，你可以在
 `~/.gitconfig` 中加入以下配置：
 
-```
+<pre>
 [user]
     name = 你的用户名
     email = 你的邮件地址
@@ -56,7 +57,7 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
     st = status
     last = log -1 HEAD
     unstage = reset HEAD --
-```
+</pre>
 
 配置详情请参考官方文档。
 
@@ -103,7 +104,7 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 接着在`_docs`目录下找到想要翻译的类别（一般是带`status-`前缀的`.md`文件），编辑它。
 在文档内找到想要翻译的文档条目。若无人认领的话，直接在文档条目后添加认领信息即可。具体格式如下：
 
-```
+<pre>
 文档  // 译者: 状态[ (注释)]
 
 其中：
@@ -114,7 +115,7 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
 |  表示或者
 [] 表示可选
-```
+</pre>
 
 若要认领任务，请注明译者并将状态标为`*待译*`；若已经开始翻译，请将状态改为`*翻译*`；
 状态可以是上面列出状态以外的其它状态；非`完成`状态请使用`*星号突出*`格式标注。
@@ -122,9 +123,11 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
 例如，OlingCat 和 minux 共同翻译了 runtime 包的文档，现在正在校对。那么可以在 `status-pkg.md` 里这样写：
 
-    ……
-    runtime  // OlingCat & minux: *校对* (minux: extern.go, debug.go 仍需校对)
-    ……
+<pre>
+……
+runtime  // OlingCat & minux: *校对* (minux: extern.go, debug.go 仍需校对)
+……
+</pre>
 
 之后将修改的文件添加到 stage、提交、同步、push：
 
@@ -200,18 +203,14 @@ debug.go 文件仍需校对。
 
 之后保存关闭即可。当然，如果所有文件都需要提交，且无需详细描述，可以直接执行：
 
-```
-git ci -am "runtime: 校对完毕。"
-```
+    git ci -am "runtime: 校对完毕。"
 
 在 push 之前，你还需要同步最新的远程代码库。
 
 ### 同步
 一般来说，由于译者各司其职，每个文档之间没有交集，所以只需要执行
 
-```
-git pull upstream
-```
+    git pull upstream
 
 即可。不过偶尔有可能发生冲突，Git 应该会出现类似这样的信息：
 
@@ -260,9 +259,9 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 </pre>
 
 冲突可能有多处，请确保全部解决。接着用`git add`把改好的文件添加到 stage 中，执行
-```
-git rebase --continue
-```
+
+    git rebase --continue
+
 就可以继续了。如果冲突文件有多个，请重复上面的步骤继续解决，直到不再冲突为止。
 
 一切完成之后，你就可以 push 并发送 PR 准备审校了。
