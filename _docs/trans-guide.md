@@ -90,6 +90,10 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 ## 准备翻译
 翻译前需要认领翻译任务，这样既可以让大家知道你在翻译的文档，也可以避免重复翻译。
 
+### 阅读翻译规范
+翻译是个累活，需要注意的细节繁多。因此考虑到本文长度，我们不打算在这里叙述。
+具体的方法及注意事项请阅读我们的[翻译规范](./trans-spec.html)。
+
 ### 认领翻译任务
 首先，你需要 fork [本站的源码](https://github.com/golang-zh/golang-zh.github.io)。
 将自己的 fork clone 到本地后，添加用于同步的远程代码库：
@@ -134,10 +138,6 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
     runtime  // OlingCat & minux: 完成
 
 然后重复以上步骤即可。其它文档的状态更新步骤同上。
-
-### 阅读翻译规范
-翻译是个累活，需要注意的细节繁多。因此考虑到本文长度，我们不打算在这里叙述。
-具体的方法及注意事项请阅读我们的[翻译规范](./trans-spec.html)。
 
 现在一切准备就绪，我们可以开始进行翻译了。
 
@@ -203,12 +203,92 @@ debug.go 文件仍需校对。
 git ci -am "runtime: 校对完毕。"
 ```
 
-之后，你就可以 push 并发送 PR 了。
+在 push 之前，你还需要同步最新的远程代码库。
+
+### 同步
+一般来说，由于译者各司其职，每个文档之间没有交集，所以只需要执行
+
+```
+git pull upstream
+```
+
+即可。不过偶尔有可能发生冲突，Git 应该会出现类似这样的信息：
+
+```
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From git@github.com:golang-zh/golang-zh.github.io.git
+   023ec03..db0f668  zh-master  -> upstream/zh-master
+First, rewinding head to replay your work on top of it...
+Applying: 你的某个本地提交
+Using index info to reconstruct a base tree...
+M   更改的某个文件
+Falling back to patching base and 3-way merge...
+Auto-merging 更改的某个文件
+CONFLICT (content): Merge conflict in 更改的某个文件
+Failed to merge in the changes.
+Patch failed at 0001 你的某个本地提交
+The copy of the patch that failed is found in:
+   本地代码库/.git/rebase-apply/patch
+
+When you have resolved this problem, run "git rebase --continue".
+If you prefer to skip this patch, run "git rebase --skip" instead.
+To check out the original branch and stop rebasing, run "git rebase --abort".
+```
+
+这时，就需要你手动解决冲突了。打开提示冲突的文件，搜索 `=======`（当然有正则搜索的编辑器可以搜 `[<=>]{7}`），
+你会找到包含标准冲突格式的信息：
+
+```
+……
+<<<<<<< HEAD
+远程的更改
+=======
+本地的更改
+>>>>>>> 你的某个本地提交
+……
+```
+
+这时保留需要的内容，删掉不需要的内容和标准冲突格式信息：
+
+```
+……
+本地的更改（也有可能是远程更改或者二者的结合）
+……
+```
+
+冲突可能有多处，请确保全部解决。接着用`git add`把改好的文件添加到 stage 中，执行
+```
+git rebase --continue
+```
+就可以继续了。如果冲突文件有多个，请重复上面的步骤继续解决，直到不再冲突为止。
+
+一切完成之后，你就可以 push 并发送 PR 准备审校了。
 
 ### 审校
 `Golang-zh` 项目组的成员会认真阅读并审校你的翻译。若有建议的更改，他们会直接在下方引用并回复。
 请在本地修改文件后再次提交并发送 PR，审校者会再次对新的更改进行下一轮审校，如此重复。
-当审校者们确认无误后，会回复 LGTM（Looks Good To Me：我很满意），这时管理组成员会接受此
+当审校者们确认无误后，会回复 `LGTM`（Looks Good To Me：我很满意），这时管理组成员会接受此
 PR 并合并到主代码库中，之后他人就可以同步你的更新了。
 
-### 同步
+## 总结
+虽然上面啰嗦了一堆，不过大多都是第一次翻译时的准备工作。总体的流程如下：
+
+1. 前提：Github 账户、梯子、邮箱、Git 的基本使用。
+2. 申请：直接 Fork 然后提交发送 PR。
+3. 配置：
+    - Git：用户名、邮箱、编辑器、可选的彩色高亮和命令别名
+    - 本地代码库：设置 upstream、自动 rebase
+4. 认真阅读翻译规范
+
+日常流程：
+
+1. 认领任务
+2. 翻译提交
+3. 同步更新
+4. Push 发 PR
+5. 反复审校
+6. 重复 1 - 5
+
+嗯..就是这样。
