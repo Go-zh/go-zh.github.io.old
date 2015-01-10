@@ -156,7 +156,7 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
 此时 Git 会通过你设置的编辑器打开对应的提交描述文件，类似于这样：
 
-```
+<pre>
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
@@ -165,25 +165,25 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 # Changes to be committed:
 #   modified:   src/runtime/extern.go
 #
-```
+</pre>
 
 该文件的第一行是空行，请在这行对你的更改进行简短的描述。若有必要，
 请在换行后再插入一个空行，接着是详细的描述。如果有相关的引用，请在描述中提及。
 我们建议提交信息使用中文，这样合并到主代码库后便于区分官方的提交。
 我们约定的提交信息格式分为三部分：
 
-```
+<pre>
 包名或文档名: 简述。
 
 以及一段
 可选的详细描述。
 
 # Please enter the commit message....
-```
+</pre>
 
 例如：
 
-```
+<pre>
 runtime: extern.go 校对完毕。
 
 extern.go 文件内的部分文档仍需与官方同步更新，已标记 TODO；
@@ -196,7 +196,7 @@ debug.go 文件仍需校对。
 # Changes to be committed:
 #   modified:   src/runtime/extern.go
 #
-```
+</pre>
 
 之后保存关闭即可。当然，如果所有文件都需要提交，且无需详细描述，可以直接执行：
 
@@ -215,7 +215,7 @@ git pull upstream
 
 即可。不过偶尔有可能发生冲突，Git 应该会出现类似这样的信息：
 
-```
+<pre>
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
@@ -236,12 +236,12 @@ The copy of the patch that failed is found in:
 When you have resolved this problem, run "git rebase --continue".
 If you prefer to skip this patch, run "git rebase --skip" instead.
 To check out the original branch and stop rebasing, run "git rebase --abort".
-```
+</pre>
 
 这时，就需要你手动解决冲突了。打开提示冲突的文件，搜索 `=======`（当然有正则搜索的编辑器可以搜 `[<=>]{7}`），
 你会找到包含标准冲突格式的信息：
 
-```
+<pre>
 ……
 <<<<<<< HEAD
 远程的更改
@@ -249,15 +249,15 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 本地的更改
 >>>>>>> 你的某个本地提交
 ……
-```
+</pre>
 
 这时保留需要的内容，删掉不需要的内容和标准冲突格式信息：
 
-```
+<pre>
 ……
 本地的更改（也有可能是远程更改或者二者的结合）
 ……
-```
+</pre>
 
 冲突可能有多处，请确保全部解决。接着用`git add`把改好的文件添加到 stage 中，执行
 ```
