@@ -5,5 +5,5 @@ TODO(OlingCat):
 添加翻译规范
 整理翻译列表
 整理术语列表
-整理 zh-article 到 blog
+整理 zh-articles 到 blog
 添加 css 及导航列表
