@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 术语列表
+summary: 列出的术语的翻译及详情。
 ---
 # {{ page.title }}
 

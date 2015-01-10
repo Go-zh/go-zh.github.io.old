@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 翻译指南
+summary: 说明了翻译步骤及注意事项。
 ---
 
 # Go 项目翻译指南
