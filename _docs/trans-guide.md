@@ -6,7 +6,7 @@ summary: 说明了翻译步骤及注意事项。
 
 # Go 项目翻译指南
 本文档描述了参与翻译的方法及注意事项。若需补充，请向
-[本站代码库](https://github.com/golang-zh/golang-zh.github.io)
+[本站代码库](https://github.com/Go-zh/go-zh.github.io)
 添加 issue，在进行过讨论后请在你的 fork 中提交修改并发送 PR（即 Pull Request，下同）。
 
 ## 前提需求
@@ -18,10 +18,10 @@ Go 项目源码采用 [Git](http://git-scm.com/) 进行版本控制，因此你�
 作为学习和参考的资料，当然[官方文档](http://git-scm.com/doc)也是个不错的选择。
 
 ## 申请参与
-要想参与翻译很简单，直接在 [项目主页](https://github.com/golang-zh)
+要想参与翻译很简单，直接在 [项目主页](https://github.com/Go-zh)
 的列表中选择你想要参与的子项目，点击右上的 Fork 即可。在 fork
 时，你可以选择一个名字以便和官方源码库区分（例如`Go-zh`）。在你第一次发送
-PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你就正式成为项目组成员了。
+PR 时，我们会把你添加到 Go-zh 的 Translator 小组中，这样你就正式成为项目组成员了。
 
 ## 环境配置
 在开始翻译之前，我们需要做一些配置，以方便后续的翻译工作。
@@ -70,9 +70,9 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
 在翻译过程中，我们还需要经常和主代码库同步，因此你还要设置远程代码库：
 
-    git remote add upstream git@github.com:golang-zh/go.git
+    git remote add upstream git@github.com:Go-zh/go.git
 
-这里的 `upstream` 可以取任何名字（比如 `golang-zh`），只要你看到它能明白是什么就行。
+这里的 `upstream` 可以取任何名字（比如 `Go-zh`），只要你看到它能明白是什么就行。
 
 我们要求源码里的换行符为`\n`，因此需设置提交时自动转换：
 
@@ -96,10 +96,10 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 具体的方法及注意事项请阅读我们的[翻译规范](./trans-spec.html)。
 
 ### 认领翻译任务
-首先，你需要 fork [本站的源码](https://github.com/golang-zh/golang-zh.github.io)。
+首先，你需要 fork [本站的源码](https://github.com/Go-zh/go-zh.github.io)。
 将自己的 fork clone 到本地后，添加用于同步的远程代码库：
 
-    git remote add upstream git@github.com:golang-zh/golang-zh.github.io.git
+    git remote add upstream git@github.com:Go-zh/go-zh.github.io.git
 
 接着在`_docs`目录下找到想要翻译的类别（一般是带`status-`前缀的`.md`文件），编辑它。
 在文档内找到想要翻译的文档条目。若无人认领的话，直接在文档条目后添加认领信息即可。具体格式如下：
@@ -145,7 +145,7 @@ runtime  // OlingCat & minux: *校对* (minux: extern.go, debug.go 仍需校对)
 现在一切准备就绪，我们可以开始进行翻译了。
 
 ## 翻译过程
-在翻译过程中，难免会遇到拿不准的地方，这时请在 `Golang-zh` 对应的项目里创建 issue
+在翻译过程中，难免会遇到拿不准的地方，这时请在 `Go-zh` 对应的项目里创建 issue
 发起讨论。你也可以在讨论中@某人的ID，这样可以让他在第一时间内看到并参与进来。
 讨论结束后，请关闭该 issue。
 
@@ -218,7 +218,7 @@ debug.go 文件仍需校对。
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
-From git@github.com:golang-zh/golang-zh.github.io.git
+From git@github.com:Go-zh/go-zh.github.io.git
    023ec03..db0f668  zh-master  -> upstream/zh-master
 First, rewinding head to replay your work on top of it...
 Applying: 你的某个本地提交
@@ -267,7 +267,7 @@ To check out the original branch and stop rebasing, run "git rebase --abort".
 一切完成之后，你就可以 push 并发送 PR 准备审校了。
 
 ### 审校
-`Golang-zh` 项目组的成员会认真阅读并审校你的翻译。若有建议的更改，他们会直接在下方引用并回复。
+`Go-zh` 项目组的成员会认真阅读并审校你的翻译。若有建议的更改，他们会直接在下方引用并回复。
 请在本地修改文件后再次提交并发送 PR，审校者会再次对新的更改进行下一轮审校，如此重复。
 当审校者们确认无误后，会回复 `LGTM`（Looks Good To Me：我很满意），这时管理组成员会接受此
 PR 并合并到主代码库中，之后他人就可以同步你的更新了。
