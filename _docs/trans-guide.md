@@ -35,17 +35,12 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
     git config --global user.name "你的用户名"
     git config --global user.email "你的邮件地址"
+    git config --global core.editor "你的惯用编辑器"
 
-一般来说，Git 只需要基本的用户名和邮件地址就能正常工作。不过为了方便，你可以在
-`~/.gitconfig` 中加入以下配置：
+一般来说，Git 只需要这些基本的配置就能正常工作。不过为了方便，你也可以在
+`~/.gitconfig` 中再加入以下配置：
 
 <pre>
-[user]
-    name = 你的用户名
-    email = 你的邮件地址
-[core]
-    editor = 你的惯用编辑器
-    autocrlf = input
 [color]
     ui = true
     status = auto
@@ -79,13 +74,18 @@ PR 时，我们会把你添加到 Golang-zh 的 Translator 小组中，这样你
 
 这里的 `upstream` 可以取任何名字（比如 `golang-zh`），只要你看到它能明白是什么就行。
 
+我们要求源码里的换行符为`\n`，因此需设置提交时自动转换：
+
+    git config core.autocrlf input
+
 为了让提交的历史记录看起来更简洁，我们需要为代码库设置自动 rebase：
 
     git config branch.autosetuprebase always
 
-记得在每次 clone 代码库后都要执行。如果你觉得麻烦，而且确认不会影响其它代码库，
-可以设为全局选项：
+记得这两条命令在每次 clone 代码库后都要执行。当然如果你觉得麻烦，而且确认不会影响到其它代码库，
+可以将它们设为全局选项：
 
+    git config --global core.autocrlf input
     git config --global branch.autosetuprebase always
 
 ## 准备翻译
@@ -291,4 +291,4 @@ PR 并合并到主代码库中，之后他人就可以同步你的更新了。
 5. 反复审校
 6. 重复 1 - 5
 
-嗯..就是这样。
+嗯……就是这样。

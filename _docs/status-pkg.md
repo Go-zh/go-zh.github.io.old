@@ -99,11 +99,6 @@ pkg
 │   └── syscall
 ├── io         // OlingCat: 完成
 │   └── ioutil // OlingCat & Liudi Wu: 完成
-├── lib9
-│   ├── fmt
-│   └── utf
-├── libbio
-├── liblink
 ├── log
 │   └── syslog
 ├── math      // OlingCat: 完成
@@ -157,7 +152,7 @@ pkg
 │   ├── tabwriter  // Stone Lion: *翻译*
 │   └── template   // Stone Lion: *翻译*
 │       └── parse  // Stone Lion: *翻译*
-├── time      // OlingCat:  *待译*
+├── time      // OlingCat: *待译*
 ├── unicode   // OlingCat: 完成
 │   ├── utf16 // OlingCat: 完成
 │   └── utf8  // OlingCat: 完成
