@@ -1,13 +1,13 @@
 ---
 layout: default
 title: 包文档翻译状态
-summary: 记录了包文档的翻译状态和任务分配。
+summary: 记录了包文档的翻译状态及任务分配。
 ---
 
-本文档用于记录包文档的翻译状态。
+本文档用于记录包文档的翻译状态及任务分配。包文档位于`go/src`内的各包源码注释中。
 
 <pre>
-pkg
+src
 ├── archive
 │   ├── tar  // Liudi Wu: 完成 (Chensi Yuan: 整理)
 │   └── zip  // Liudi Wu: 完成 (Chensi Yuan: 整理)
