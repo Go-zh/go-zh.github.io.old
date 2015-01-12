@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 博客翻译状态
+title: 命令工具文档翻译状态
 summary: 记录了命令工具文档的翻译状态及任务分配。
 ---
 
