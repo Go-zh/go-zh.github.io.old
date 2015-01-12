@@ -132,7 +132,7 @@ runtime  // OlingCat & minux: *校对* (minux: extern.go, debug.go 仍需校对)
 之后将修改的文件添加到 stage、提交、同步、push：
 
     git add _docs/status-pkg.md
-    git ci -m "runtime // OlingCat & minux: *校对*"
+    git ci -m "runtime: OlingCat & minux *校对*"
     git pull upstream
     git push
 
