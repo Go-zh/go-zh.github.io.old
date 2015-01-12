@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 包文档翻译状态
+title: 基本文档翻译状态
 summary: 记录了基本文档的翻译状态及任务分配。
 ---
 
