@@ -24,7 +24,7 @@ summary: 说明了翻译规范及注意事项。
 func Abs(x float64) float64
 <pre>
 
-**在注释符内插入制表符**并在注释与代码间插入换行符后，就可以紧挨着声明进行翻译了：
+在**注释符内插入制表符**并在注释与代码间插入换行符后，就可以紧挨着声明进行翻译了：
 
 <pre>
 //	 Abs returns the absolute value of x.
