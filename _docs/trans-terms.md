@@ -75,31 +75,4 @@ cache             | 缓存              | n      |      |
 constructor       | 构造函数          | n      |      |
 embedding         | 内嵌              | n/v    |      | 用作类型，与“嵌入式”分开
 
-## 有争议的术语
-
-容易有争议的翻译   | 最终结果                  | 供讨论的选项                                          | 附注/用法实例
------------------- | ------------------------- | ----------------------------------------------------- | -------------
-goroutine          |                           | Go程                                                  |
-map                | 字典                      | 一般翻译为映射，但是映射是个数据结构么？字典/关联数组 |
-tag                |                           |                                                       | 注意，新版 go1compat 上改用 (un)keyed struct literal，所以不再有 tagged struct literal这种用法了 (但是 keyed struct literal 咋翻译？)
-label              |                           | 标记                                                  | 和 tag 区分，tag 用得多 struct tag, build tag, tagged struct，label 似乎只在一个地方有用
-channel            | 信道                      | 通道/信道？                                           | receive/send-only channel？
-panic              |                           |                                                       | panic
-recover            |                           |                                                       | recover
-embedding          |                           | 是嵌入好内嵌好？                                      | struct embedding/embedded struct
-nil                | 无值                      | nil/空值/空/无值                                      | nil 无值，empty 空(值)，zero-value 零值
-buitin function    | 内建函数                  | 内建函数？                                            |
-argument/parameter | 实(际)参(数)/形(式)参(数) | 参数？实参/形参？                                     |
-receiver           |                           | 接收器？太生硬了                                      |
-method             | 方法                      | 方法                                                  |
-interface          | 接口                      | 接口                                                  |
-variadic           | 变参(函数)                | 变参函数 （变的是参数还是参数的个数？）               | variadic function, Google Translate 翻译做 可变参数
-unaddressable      | 无法取址                  | 无法取址的？                                          | unaddressable value
-switch             |                           | 多项选择？                                            |
-case               | 分支                      | 情况？分支？                                          |
-fallthrough        | fallthrough               | 穿透/下穿                                             |
-untyped            | 未定型                    | 无类型/未定型（类型尚未确定）？？                     |
-field              |                           |（结构体的）字段                                       |
-reference          |                           | 引用？                                                | argument must be a field reference
-
-说明: 如果对翻译有更好的建议请[在此（需梯子）](https://docs.google.com/spreadsheets/d/1oBEYj0TUCuTDy5vLGsjtMQ_Sd-_FASf393bhC-rfbGQ/edit?usp=sharing)参与讨论.
+说明: 如果对翻译有更好的建议请[在此](https://github.com/Go-zh/go-zh.github.io/issues/20)参与讨论。

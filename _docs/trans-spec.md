@@ -75,7 +75,9 @@ func Inf(sign int) float64
 package bytes
 </pre>
 
-由于`_test.go`文档内包含`godoc` 可提取的示例因此也需要对这些文件进行翻译。
+由于`*_test.go`文件内可能包含`godoc`可提取的示例函数（即以`Example`开头的函数），
+因此也需要对这些函数前的注释文档进行翻译（一般情况下，这些文件名会包含`example`字样，
+例如`example_test.go`）。
 
 每个源文件头的版权声明，我们则不作翻译。
 此外，如果在翻译过程中发现 typo，请向官方提交 patch，具体方法见

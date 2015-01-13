@@ -94,8 +94,9 @@ PR 时，我们会把你添加到 Go-zh 的 Translator 小组中，这样你就�
 ### 阅读翻译规范
 翻译是个累活，需要注意的细节繁多。因此考虑到本文长度，我们不打算在这里叙述。
 具体的方法及注意事项请阅读我们的[翻译规范](./trans-spec.html)和[术语表](./trans-terms.html)。
-**注意**：由于翻译规范和术语表仍未完成，请先参考源码库里的 `doc/go_spec.old.html` 文档和
-https://docs.google.com/spreadsheets/d/1oBEYj0TUCuTDy5vLGsjtMQ_Sd-_FASf393bhC-rfbGQ/edit?usp=sharing 。
+**注意**：由于翻译规范和术语表仍未完成，请先参考源码库里的 `doc/go_spec.old.html` 文档
+（[网页版](https://zh-golang.appspot.com/ref/spec.old?lang=en)）和
+[临时术语表](https://docs.google.com/spreadsheets/d/1oBEYj0TUCuTDy5vLGsjtMQ_Sd-_FASf393bhC-rfbGQ/edit?usp=sharing)
 
 ### 认领翻译任务
 首先，你需要 fork [本站的源码](https://github.com/Go-zh/go-zh.github.io)。
