@@ -26,7 +26,7 @@ TODO(OlingCat): 把下面这坨东西拆成细条配上例子。
 //	Abs(±Inf) = +Inf
 //	Abs(NaN) = NaN
 func Abs(x float64) float64
-<pre>
+</pre>
 
 在**注释符内插入制表符**并在注释与代码间插入换行符后，就可以紧挨着声明进行翻译了：
 
