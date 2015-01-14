@@ -31,8 +31,8 @@ src
 │   ├── dsa
 │   ├── ecdsa
 │   ├── elliptic
-│   ├── hmac
-│   ├── md5
+│   ├── hmac     // zieckey : *翻译*
+│   ├── md5      // Bluek404: *翻译*
 │   ├── rand
 │   ├── rc4
 │   ├── rsa
@@ -79,11 +79,11 @@ src
 │   ├── printer
 │   ├── scanner
 │   └── token
-├── hash
-│   ├── adler32
-│   ├── crc32
-│   ├── crc64
-│   └── fnv
+├── hash        // zieckey : *待译*
+│   ├── adler32 // zieckey : *待译*
+│   ├── crc32   // zieckey : *待译*
+│   ├── crc64   // zieckey : *待译*
+│   └── fnv     // zieckey : *待译*
 ├───html            // Cipher Chen: *待译*
 │   └── template    // Cipher Chen: *待译*
 ├── image           // 轩脉刃: 完成
