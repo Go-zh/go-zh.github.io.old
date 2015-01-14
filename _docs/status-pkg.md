@@ -116,7 +116,7 @@ src
 │   │   ├── fcgi      // 轩脉刃: 完成
 │   │   ├── httptest  // 轩脉刃: 完成
 │   │   ├── httputil  // 轩脉刃: 完成
-│   │   ├── internal
+│   │   ├── internal  // 轩脉刃: 完成
 │   │   └── pprof     // 轩脉刃: 完成
 │   ├── mail          // 轩脉刃: 完成
 │   ├── rpc           // 轩脉刃: 完成
@@ -153,6 +153,56 @@ src
 │   └── template   // Stone Lion: *翻译*
 │       └── parse  // Stone Lion: *翻译*
 ├── time      // OlingCat: *待译*
+├── unicode   // OlingCat: 完成
+│   ├── utf16 // OlingCat: 完成
+│   └── utf8  // OlingCat: 完成
+└── unsafe    // OlingCat: 完成
+</pre>
+
+以下包文档的翻译需要调整为新格式并重新校对：
+
+<pre>
+├── archive
+│   ├── tar  // Liudi Wu: 完成 (Chensi Yuan: 整理)
+│   └── zip  // Liudi Wu: 完成 (Chensi Yuan: 整理)
+├── bufio    // OlingCat: 部分完成 (Chensi Yuan：整理合并 Liudi Wu 翻译)
+├── builtin  // OlingCat: 完成
+├── encoding
+│   ├── ascii85 // Xize Dong: *校对*
+│   └── asn1    // Xize Dong: *翻译*
+├── errors // OlingCat: 完成
+├── flag   // 轩脉刃: 完成 (OlingCat: *更新*)
+├── fmt    // OlingCat & Liudi Wu: 完成
+├── image           // 轩脉刃: 完成
+│   ├── color       // 轩脉刃: 完成
+│   ├── draw        // 轩脉刃: 完成
+│   ├── gif         // 轩脉刃: 完成
+│   └── png         // 轩脉刃: 完成
+├── io         // OlingCat: 完成
+│   └── ioutil // OlingCat & Liudi Wu: 完成
+├── math      // OlingCat: 完成
+│   ├── big   // OlingCat: *翻译*
+│   ├── cmplx // OlingCat: 完成
+│   └── rand  // OlingCat: *待译*
+├── net
+│   ├── http          // OlingCat & Liudi Wu: 完成 (OlingCat: 需整理)
+│   │   ├── cgi       // 轩脉刃: 完成
+│   │   ├── cookiejar // 轩脉刃: *待译*
+│   │   ├── fcgi      // 轩脉刃: 完成
+│   │   ├── httptest  // 轩脉刃: 完成
+│   │   ├── httputil  // 轩脉刃: 完成
+│   │   └── pprof     // 轩脉刃: 完成
+│   ├── mail          // 轩脉刃: 完成
+│   └── rpc           // 轩脉刃: 完成
+│       └── jsonrpc   // 轩脉刃: 完成
+├── runtime    // OlingCat: 完成 (OlingCat: 需更新)
+│   ├── cgo    // OlingCat: 完成
+│   ├── debug  // OlingCat: 完成
+│   ├── pprof  // OlingCat: 完成
+│   └── race   // OlingCat: 完成
+├── sort       // Johntech: 完成 (OlingCat: 已校对)
+├── sync       // OlingCat: 完成
+│   └── atomic // OlingCat: 完成
 ├── unicode   // OlingCat: 完成
 │   ├── utf16 // OlingCat: 完成
 │   └── utf8  // OlingCat: 完成
