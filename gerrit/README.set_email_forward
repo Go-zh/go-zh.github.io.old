@@ -1,0 +1,7 @@
+[ -z "$prj" ] && { echo please set '$'prj; exit 1; }
+
+git push ssh://minux@localhost:29418/$prj HEAD:refs/meta/config
+git co FETCH_HEAD
+git config -f project.config notify.team.email golang-china@googlegroups.com
+git ci project.config -m "set user notification email to golang-china@googlegroups.com"
+git push ssh://minux@localhost:29418/$prj HEAD:refs/meta/config
