@@ -104,6 +104,7 @@ normalization.article
 organizing-go-code.article
 oscon.article
 osconreport.article
+package-names.article
 pipelines.article
 playground.article
 preview-of-go-version-1.article
