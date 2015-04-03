@@ -7,17 +7,25 @@ summary: 说明了翻译步骤及注意事项。
 # Go 项目翻译指南
 本文档描述了参与翻译的方法及注意事项。若需补充，请向
 [本站代码库](https://github.com/Go-zh/go-zh.github.io)
-添加 issue，在进行过讨论后请在你的 fork 中提交修改并发送 PR（即 Pull Request，下同）。
+添加 issue，在进行过讨论后请在你的本地 clone 中提交修改并发送 CL（即 Change List，稍后解释）。
 
 ## 前提需求
 我们的翻译项目托管在 [Github](https://github.com/) 上，因此首先你需要有一个
-Github 账户和一把足够长的梯子。为方便交流，你还需要一个电子邮件账户，我们推荐 Gmail。
+Github 账户。为方便交流，你还需要一个电子邮件账户和一把足够长的梯子，我们推荐 Gmail。
 
 Go 项目源码采用 [Git](http://git-scm.com/) 进行版本控制，因此你还需要安装 Git
 并熟悉它的基本使用。我们推荐 [ProGit](http://git-scm.com/book/zh)
 作为学习和参考的资料，当然[官方文档](http://git-scm.com/doc)也是个不错的选择。
 
+由于我们使用了官方 Review 工具的[修改版](https://github.com/Go-zh/review)来配合
+[Gerrit](https://review.go-zh.org/) 进行审校，因此你还需要装有 Go 的类 Unix 环境
+（目前 git-codereview 还不支持 Windows）。
+
 ## 申请参与
+首先我们需要能通过 SSH 访问 Github，这样安全性更好，而且省去了每次 push 输入密码的麻烦。
+配置方式详见 Github 的[官方文档](https://help.github.com/articles/generating-ssh-keys)。
+
+现在假设你已经有了 SSH key，
 要想参与翻译很简单，直接在 [项目主页](https://github.com/Go-zh)
 的列表中选择你想要参与的子项目，点击右上的 Fork 即可。在 fork
 时，你可以选择一个名字以便和官方源码库区分（例如`Go-zh`）。在你第一次发送
@@ -65,8 +73,8 @@ PR 时，我们会把你添加到 Go-zh 的 Translator 小组中，这样你就�
     git clone git@github.com:OlingCat/Go-zh.git # 这就是前面复制的地址
 
 稍等片刻后，当前目录下会出现一个 `Go-zh` 目录，这样我们就有了本地的代码库。
-代码库默认分支为 `zh-master`，我们将在此分支下进行翻译。你可以执行 `cd Go-zh`
-进入到该目录内再执行 `git st` 来确认，输出中应当会有 `On branch zh-master` 的字样。
+代码库默认分支为 `master`，我们将在此分支下进行翻译。你可以执行 `cd Go-zh`
+进入到该目录内再执行 `git st` 来确认，输出中应当会有 `On branch master` 的字样。
 
 在翻译过程中，我们还需要经常和主代码库同步，因此你还要设置远程代码库：
 
